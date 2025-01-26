@@ -1,0 +1,84 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Form */
+#form-tp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-tp input, #form-tp select, #form-tp button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Toast Popup */
+.toast-popup-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    padding: 10px;
+}
+
+.toast-popup-container.left { left: 20px; }
+.toast-popup-container.right { right: 20px; }
+.toast-popup-container.top { top: 20px; flex-direction: column-reverse; }
+.toast-popup-container.bottom { bottom: 20px; }
+
+/* Toast */
+.toast-popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 6px;
+    min-width: 250px;
+    max-width: 400px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.toast-popup.success { background: #4CAF50; }
+.toast-popup.error { background: #F44336; }
+.toast-popup.warning { background: #FF9800; }
+.toast-popup.info { background: #2196F3; }
+
+/* Close Button */
+.btn-tp-del {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
